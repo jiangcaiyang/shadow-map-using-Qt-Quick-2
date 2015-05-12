@@ -55,10 +55,15 @@ void View::onWindowChanged( QQuickWindow* win )
 
 void View::render( void )
 {
+    window( )->resetOpenGLState( );
+
+    QOpenGLFunctions* f = window( )->openglContext( )->functions( );
+    f->glEnable( GL_DEPTH_TEST );
+    f->glEnable( GL_CULL_FACE );
+
     renderShadow( );
 
     QRectF sceneRect = boundingRect( );
-    QOpenGLFunctions* f = window( )->openglContext( )->functions( );
     f->glViewport( sceneRect.x( ),
                    sceneRect.y( ),
                    sceneRect.width( ),
