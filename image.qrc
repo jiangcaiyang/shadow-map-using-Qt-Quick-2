@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/fruit.jpg</file>
+        <file>image/stone.jpg</file>
+        <file>image/biscuit.jpg</file>
+        <file>image/color_line.jpg</file>
+        <file>image/shining.jpg</file>
+        <file>image/spiral.jpg</file>
+        <file>image/wood.jpg</file>
+    </qresource>
+</RCC>
